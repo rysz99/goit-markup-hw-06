@@ -1,1 +1,1 @@
-https://rysz99.github.io/goit-markup-hw-05/
+https://rysz99.github.io/goit-markup-hw-06/
