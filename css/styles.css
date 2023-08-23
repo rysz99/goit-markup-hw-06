@@ -694,6 +694,15 @@ header
     align-content: center;
 }
 
+.cancel:hover
+{
+    background-color: var(--click-and-focus);
+    color: var(--background-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .about-item
 {
     justify-content: space-between;
@@ -726,13 +735,16 @@ header
 
 .join-us
 {
-    text-transform: uppercase;
     margin-top: 12px;
     margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.143;
-    letter-spacing: 0.03em;
+    color: var(--white, #FFF);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    color: var(--background-color);
 }
 
 label
@@ -776,11 +788,17 @@ textarea
 
 form .form-head
 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.172;
+    color:  var(--logo-and-link-color);
+   
+
+    width: 360px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    letter-spacing: 0.32px;
     text-align: center;
-    letter-spacing: 0.03em;
     margin-top: 40px;
     margin-bottom: 12px;
 }
@@ -795,6 +813,11 @@ form .form-feedback
     margin-top: 10px;
     padding-bottom: 4px;
     color: #757575;
+}
+
+.form-btn
+{
+    background-color: #4D5AE5;
 }
 
 .form-name input,
@@ -814,10 +837,12 @@ form .form-feedback
 .form-feedback textarea:focus
 {
     outline: none;
-    border: 1px solid #2196f3;
+    border: 1px solid var(--brand-color);
     box-sizing: border-box;
     border-radius: 4px;
-    fill: #2196f3;
+    fill: var(--brand-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-name input,
@@ -848,10 +873,13 @@ form .form-feedback
 .modal-form-policy-txt
 {
     display: inline;
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
-    color: #757575;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 0.48px;
+    color: #8E8F99;
 }
 
 .modal-form-policy-txt input
@@ -864,7 +892,7 @@ form .form-feedback
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
-    color: #2196f3;
+    color: var(--brand-color);
 }
 
 .modal-form-policy-txt::before
@@ -881,8 +909,8 @@ form .form-feedback
 .modal-form-policy:checked
 + .modal-form-policy-txt::before
 {
-    background-color: #2196f3;
-    border: 1px solid #ffffff;
+    background-color: var(--click-and-focus);
+    border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: 2px;
     background-image: url("../images/checked.svg");
     background-repeat: no-repeat;
@@ -891,7 +919,7 @@ form .form-feedback
 
 .signup-form button
 {
-    background-color: #2196f3;
+    background-color: var(--brand-color);
     color: #ffffff;
     font: "Roboto";
     font-size: 16px;
@@ -906,37 +934,65 @@ form .form-feedback
     margin-bottom: 40px;
 }
 
+.signup-form button:hover
+{
+    background-color: var(--click-and-focus);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .newsletter-form-email
 {
-    background: none;
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    padding-left: 16px;
-    margin-right: 12px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--background-color);
+    outline: none;
+    width: 264px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--logo-and-link-color);
 }
 
 .newsletter-form-email:focus
 {
-    color: #757575;
-    outline: none;
-    border-color: #2196f3;
+    border-color: var(--click-and-focus);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .newsletter-form-btn
 {
-    background-color: #2196f3;
+    background-color: var(--brand-color);
     color: #ffffff;
-    font: "Roboto";
     border: 0px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
-    width: 200px;
-    height: 50px;
+    width: 165px;
+    height: 40px;
     fill: #ffffff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.64px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.newsletter-form-btn:hover
+{
+    background-color: var(--click-and-focus);
 }
 
 .newsletter-btn-flex
@@ -957,17 +1013,33 @@ form .form-feedback
     height: 24px;
 }
 
+.newsletter
+{
+    margin-left: 80px;
+}
+
 :root
 {
     --body-color: #434455;
+    
     --text-decoration: none;
+    
     --font-family: sans-serif;
+    
     --text-align: center;
+    
     --font-weight: 500;
+    
     --background-color: #ffffff;
+    
     --brand-color: #4d5ae5;
+    
     --logo-and-link-color: #2e2f42;
+    
     --footer-paragraph-and-logo: #f4f4fd;
+    
     --click-and-focus: #404bbf;
+
     --social-media: #31D0AA;
+
 }
