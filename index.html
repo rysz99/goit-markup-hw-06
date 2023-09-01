@@ -486,10 +486,10 @@
                 <div class="newsletter">
                     <p class="join-us">Subscribe</p>
                     <form class="newsletter-form">
-                        <input class="newsletter-form-email" type="email" name="email-newsletter" placeholder="E-mail" />
+                        <input class="newsletter-form-email" type="email" name="email-newsletter" placeholder="E-mail" required />
                         <button class="newsletter-form-btn newsletter-btn-flex" type="submit">Subscribe
-                            <svg class="newsletter-btn-icon">
-                                <use href="./images/icons.svg#"></use>
+                            <svg class="newsletter-btn-icon" width="24" height="24">
+                                <use href="icon-Frame-3" height="24" width="24"></use>
                             </svg>
                         </button>
                     </form>
@@ -504,39 +504,41 @@
             <form name="signup-form" class="signup-form">
                 <p class="form-head">Leave your contacts and we will call you back</p>
                 <label class="form-name">Name
-                    <svg class="form-icon" width="12" height="12">
+                    <svg class="form-icon" width="18" height="18">
                         <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
                     </svg>
     
-                    <input type="text" name="username" />
+                    <input type="text" name="username" required/>
                 </label>
     
                 <label class="form-phone">Phone
-                    <svg aria-colspan="form-icon" width="13" height="13">
+                    <svg class="form-icon" width="18" height="24">
                         <use href="./images/icons.svg#icon-phone-black-18dp_11"></use>
                     </svg>
     
-                    <input type="tel" name="phone_number" />
+                    <input type="tel" name="phone_number" required/>
                 </label>
     
                 <label class="form-email">Email
-                    <svg class="form-icon" width="15" height="12">
+                    <svg class="form-icon" width="18" height="24">
                         <use href="./images/icons.svg#icon-email-black-18dp_11"></use>
                     </svg> 
     
-                    <input type="email" name="email" />
+                    <input type="email" name="email" required/>
                 </label>
     
                 <label class="form-feedback">Comment
-                    <textarea name="feedback" placeholder="Text input"></textarea>
+                    <textarea name="feedback" placeholder="Text input" required></textarea>
                 </label>
     
                 <div class="agree-submit">
-                    <input class="modal-form-policy visually-hidden" id="user-policy" type="checkbox" name="policy" />
+                    <div class="flex">
+                        <input id="user-policy" class="checkbox" type="checkbox" name="checkbox" required />
     
-                    <label for="user-policy" class="modal-form-policy-txt">I accept the terms and conditions of the 
-                        <a class="form-agreement-link" href="#">Privacy Policy</a>
-                    </label>
+                        <label for="user-policy" class="modal-form-policy-txt">I accept the terms and conditions of the 
+                            <a class="form-agreement-link" href="#">Privacy Policy</a>
+                        </label>
+                    </div>
                     
                     <button class="form-btn" type="submit">Send</button>
                 </div>

@@ -666,7 +666,7 @@ header
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 1);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
     z-index: 1;
     transition: transform;
@@ -678,15 +678,14 @@ header
 
 .cancel
 {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #E7E9FC;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
-    margin-top: 8px;
-    margin-right: 8px;
+    margin: 24px 24px 24px 360px;
     box-sizing: border-box;
     position: absolute;
     top: 8px;
@@ -747,11 +746,32 @@ header
     color: var(--background-color);
 }
 
+.flex
+{
+    display: flex;
+    gap: 8px;
+    width: 362px;
+    align-items: center;
+    justify-content: center;
+}
+
 label
 {
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.checkbox
+{
+    width: 16px;
+    height: 16px;
+}
+
+.form-icon:hover,
+.form-icon:focus
+{
+    fill: var(--brand-color);
 }
 
 .form-phone,
@@ -789,8 +809,6 @@ textarea
 form .form-head
 {
     color:  var(--logo-and-link-color);
-   
-
     width: 360px;
     font-family: Roboto;
     font-size: 16px;
@@ -799,18 +817,16 @@ form .form-head
     line-height: 24px; 
     letter-spacing: 0.32px;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 12px;
+    margin: 72px 0 16px 0;
 }
 
-form .form-name,
 form .form-phone,
 form .form-email,
 form .form-feedback
 {
     font-size: 12px;
     line-height: 1.172;
-    margin-top: 10px;
+    margin-top: 8px;
     padding-bottom: 4px;
     color: #757575;
 }
@@ -877,14 +893,9 @@ form .form-feedback
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px; /* 116.667% */
+    line-height: 14px; 
     letter-spacing: 0.48px;
     color: #8E8F99;
-}
-
-.modal-form-policy-txt input
-{
-    margin-right: 8px;
 }
 
 .modal-form-policy-txt a
@@ -893,28 +904,6 @@ form .form-feedback
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: var(--brand-color);
-}
-
-.modal-form-policy-txt::before
-{
-    content: "";
-    display: inline-block;
-    margin-right: 7px;
-    top: 1px;
-    width: 16px;
-    height: 15px;
-    border: 1px solid #212121;
-}
-
-.modal-form-policy:checked
-+ .modal-form-policy-txt::before
-{
-    background-color: var(--click-and-focus);
-    border: 1px solid rgba(46, 47, 66, 0.40);
-    border-radius: 2px;
-    background-image: url("../images/checked.svg");
-    background-repeat: no-repeat;
-    background-position: 1px;
 }
 
 .signup-form button
@@ -941,6 +930,12 @@ form .form-feedback
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.newsletter-form
+{
+    display: flex;
+    gap: 16px;
+}
+
 .newsletter-form-email
 {
     border-radius: 4px;
@@ -964,30 +959,7 @@ form .form-feedback
 .newsletter-form-btn
 {
     background-color: var(--brand-color);
-    color: #ffffff;
-    border: 0px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-    width: 165px;
-    height: 40px;
-    fill: #ffffff;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.64px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 24px;
-
-    display: inline-flex;
-    padding: 8px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+    color: #FFF;
 }
 
 .newsletter-form-btn:hover
@@ -997,13 +969,11 @@ form .form-feedback
 
 .newsletter-btn-flex
 {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.875;
     letter-spacing: 0.06em;
+    text-align: center;
 }
 
 .newsletter-btn-icon
