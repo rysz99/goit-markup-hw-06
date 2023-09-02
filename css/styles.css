@@ -674,6 +674,7 @@ header
     transition-duration: 250ms;
     transition-timing-function: linear;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    flex-shrink: 0;
 }
 
 .cancel
@@ -786,15 +787,19 @@ label
 .form-email .form-icon
 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 14px;
+}
+
+.form-name .form-icon
+{
+    top: 55%;
 }
 
 textarea
 {
     resize: none;
     height: 120px;
-    color: rgba(117, 117, 117, 0.5);
 }
 
 .signup-form
@@ -829,11 +834,6 @@ form .form-feedback
     margin-top: 8px;
     padding-bottom: 4px;
     color: #757575;
-}
-
-.form-btn
-{
-    background-color: #4D5AE5;
 }
 
 .form-name input,
@@ -910,17 +910,15 @@ form .form-feedback
 {
     background-color: var(--brand-color);
     color: #ffffff;
-    font: "Roboto";
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
     border: 0px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
-    width: 200px;
-    height: 50px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    width: 169px;
+    height: 56px;
 }
 
 .signup-form button:hover
@@ -933,7 +931,7 @@ form .form-feedback
 .newsletter-form
 {
     display: flex;
-    gap: 16px;
+    gap: 24px;
 }
 
 .newsletter-form-email
@@ -960,6 +958,11 @@ form .form-feedback
 {
     background-color: var(--brand-color);
     color: #FFF;
+    width: 165px;
+    height: 40px;
+    display: flex;
+    gap: 16px;
+    padding: 8px 24px;
 }
 
 .newsletter-form-btn:hover
@@ -978,7 +981,6 @@ form .form-feedback
 
 .newsletter-btn-icon
 {
-    margin-left: 24px;
     width: 24px;
     height: 24px;
 }
