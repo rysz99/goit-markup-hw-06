@@ -774,6 +774,8 @@ label
 .form-phone:hover .form-icon
 {
     fill: var(--brand-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 250ms;
 }
 
 .form-phone,
@@ -968,6 +970,9 @@ form .form-feedback
 .newsletter-form-btn:hover
 {
     background-color: var(--click-and-focus);
+transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .newsletter-btn-flex
